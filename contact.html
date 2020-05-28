@@ -35,6 +35,45 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+.dropbtn {
+  background-color:  #36404b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content :hover {
+  background-color: yellow;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:   #36404b;}
+</style>
 </head>
 
 <body >
@@ -45,53 +84,35 @@
         <!-- header -->
  
 
+        <header>
+
             <!-- Logo -->
-          <div class ="cont">
+            <div class ="cont" >
                 <div class="logo">
-                    <a href="#."><img class="img-responsive" src="images/logo1.png" alt=""  ></a>
+                    <a href="#."><img class="img-responsive" src="images/logo1.png" alt=""></a>
                 </div>
-				</div>
-				                <!-- <div class="logo"> -->
-                    <!-- <a href="#."><img class="img-responsive" src="images/logo1.png" alt=""></a> -->
-                <!-- </div> -->
 
-                <!-- INFO -->
-                <!-- <div class="top-info-con"> -->
-                <!-- <ul> -->
+           
+            </div>
 
-                <!-- Call Us Now -->
-                <!-- <li>
-                            <div class="media-left">
-                                <div class="icon"> <i class="icon-call-in"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <h6>Call Us Now </h6>
-                                <p>+(91)9820644020 </p>
-                            </div>
-                        </li> -->
-
-                <!-- Email us -->
-                <!-- <li>
-                            <div class="media-left">
-                                <div class="icon"> <i class="icon-envelope-open"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <h6>Email us</h6>
-                                <p>info@samruddhiautoworld.com</p>
-                            </div>
-                        </li> -->
-                <!-- </ul> -->
-                <!-- </div> -->
-            
-       <header style="background-color:red"> 
             <!-- Navigation -->
             <nav class="navbar">
                 <div class="container">
                     <ul class="nav ownmenu">
                         <li> <a href="index.html">Home</a> </li>
-                        <li> <a href="about.html">About</a> </li>
-                        <li> <a href="poweroxyo2.html">Power O2</a> </li>
-						       <li> <a href="BlendedDiesel.html">Blended Diesel </a> </li>
+                        <li > <a href="about.html">About us</a> </li>
+						      
+							  
+							  <li class="dropdown">
+ <a class="dropbtn">PRODUCTS </a>
+  <div class="dropdown-content" style="background-color:  #36404b;">
+  
+   <a href="poweroxyo2.html" style="background-color:  #36404b; !important">Power O2</a>
+ <a href="BlendedDiesel.html" style="background-color:  #36404b; !important">Blended Diesel </a> 
+ 
+  </div>
+</li>
+   	  <li> <a href="media.html">media</a> </li>
                         <li> <a href="gallery.html">Gallery</a> </li>
                         <li class="active"> <a href="contact.html">Contact us</a> </li>
                     </ul>

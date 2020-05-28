@@ -25,7 +25,7 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <!-- Online Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Martel+Sans:400,200,300,600,700,800,900|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 
@@ -34,267 +34,763 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	
 <![endif]-->
+<style>
+.container1 {
+    position: relative;
+}
+/* Bottom right text */
+.text-block {
+       position: absolute;
+    top: 210px;
+    left: 50px;
+	  opacity: 0.7;
+    background-color: white;
+    color: white;
+     padding-left: 20px;
+    padding-right: 20px;
+}
+@media screen and (max-width: 992px) {
+.text-block {
+       position: absolute;
+    top: 210px;
+    left: 50px;
+	right:40px;
+	  opacity: 0.7;
+    background-color: white;
+    color: white;
+     padding-left: 20px;
+    padding-right: 20px;
+}
+<!-- .setbanner{ -->
+<!-- height: 440px; !important" -->
+<!-- } -->
+
+
+}
+@media screen and (max-width: 600px) {
+ .text-block {
+       position: absolute;
+    top: 210px;
+    left: 50px;
+	  opacity: 0.7;
+    background-color: white;
+    color: white;
+     padding-left: 20px;
+    padding-right: 20px;
+}
+<!-- .setbanner{ -->
+<!-- height: 440px; !important" -->
+<!-- } -->
+
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Oswald&display=swap');
+
+* {box-sizing: border-box}
+
+$darkTeal: rgba(7,35,36,1);
+$lightTeal: rgba(20,244,255,1);
+
+.text-slide-container {
+	box-sizing: border-box;
+	padding: 40px;
+	height: 100vh;
+	color: white;
+	background: linear-gradient(144deg, $darkTeal 0%, $lightTeal 100%);
+	overflow: hidden;
+	font-family: 'Bowlby One SC', cursive;
+}
+
+.text-slide-header {
+	font-size: 3.2rem;
+	margin: 0;
+	text-shadow: 0px 2px 0px black;
+}
+
+.text-slide-subheader {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.55rem;
+	margin: 0;
+	text-transform: uppercase;
+	text-shadow: 0px 2px 0px black;
+}
+
+.text-slide-button {
+	font-family: 'Bowlby One SC', cursive;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 5px;
+	color: $darkTeal;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	transition: all .2s ease;
+	cursor: pointer;
+	box-shadow: 0px 1px 1px 0px black;
+	&:hover {
+		background-color: $darkTeal;
+		color: white;
+	}
+}
+
+.text-slide-text {
+	font-size: 1rem;
+}
+
+.text-slide-letter {
+	display: inline-block;
+	animation: zoom 1s ease;
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(0) translateX(20vw);
+	}
+	80% {
+		transform: scale(3,1.5);
+		text-shadow: 30px 30px 30px black;
+	}
+	100% {
+		text-shadow: 0px 2px 0px black;
+	}
+}
+.dropbtn {
+  background-color:  #36404b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content :hover {
+  background-color: yellow;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:   #36404b;}
+<!-- .setbanner{ -->
+<!-- height: 440px; !important" -->
+<!-- } -->
+.tp-banner .revslider-initialised .tp-simpleresponsive{
+height:440px !important;
+}
+.slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 500px;
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    color: #5bbd72;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    text-shadow: 0 10px 2px #223422;
+    transition: .3s;
+    width: 30px;
+    padding: 10px 13px;
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    line-height: 0;
+    box-sizing: content-box;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > i:hover {
+    background:#fff;
+    background: rgba(255, 255, 255, .8);
+    transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+    transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+    transform: translateY(1px);
+}
+
+.slider:hover > div {
+    transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+
+.slider > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.slider > ul > li {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider > ul > .showli {
+    background-color: #7EC03D;
+    -moz-animation: boing .5s forwards;
+    -o-animation: boing .5s forwards;
+    -webkit-animation: boing .5s forwards;
+    animation: boing .5s forwards;
+}
+
+.slider > ul > li:hover {
+    background-color: #7EC03D;
+}
+
+.slider > .show {
+    z-index: 1;
+}
+
+.hideDots > ul {
+    display: none;
+}
+
+.showArrows > .left {
+    left: 0;
+}
+
+.showArrows > .right {
+    right: 0;
+}
+
+.titleBar {
+    z-index: 2;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    padding: 20px 30px;
+    transition: .3s;
+    color: #fff;
+}
+
+.titleBar * {
+    transform: translate(-20px, 30px);
+    transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
+    opacity: 0;
+}
+
+.titleBarTop .titleBar * {
+    transform: translate(-20px, -30px);
+}
+
+.slider:hover .titleBar,
+.slider:hover .titleBar * {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titleBarTop .titleBar {
+    top: 0;
+    bottom: initial;
+    transform: translateY(-100%);
+}
+
+.slider > div span {
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* -------------------------------------- */
+
+#slider2 {
+    max-width: 30%;
+    margin-right: 20px;
+}
+
+.row2Wrap {
+    display: flex;
+}
+
+.content {
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1, h2, h3 {
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 100;
+}
+
+
+.content {
+    padding: 10px 15vw;
+}.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+</style>
+<style>
+    .box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%; /* Set the width of the positioned div */
+    }
+.spanmark{
+}
+</style>
+
 </head>
 
-<body>
+
+<body >
 
     <!-- Wrap -->
     <div id="wrap" >
 
         <!-- header -->
-        <header  style="background-color:white;" >
+           <header>
 
             <!-- Logo -->
-            <div class ="cont">
-			<div >
+            <div class ="cont" >
                 <div class="logo">
                     <a href="#."><img class="img-responsive" src="images/logo1.png" alt=""></a>
                 </div>
-</div>
-                <!-- INFO -->
-                <!-- <div class="top-info-con"> -->
-                    <!-- <ul> -->
 
-                <!-- Call Us Now -->
-                <!-- <li> -->
-                            <!-- <div class="media-left"> -->
-                                <!-- <div class="icon"> <i class="icon-call-in"></i></div> -->
-                            <!-- </div> -->
-                            <!-- <div class="media-body"> -->
-                                <!-- <h6>Call Us Now </h6> -->
-                                <!-- <p>+(91)9820644020 </p> -->
-                            <!-- </div> -->
-                        <!-- </li> -->
-
-                <!-- Email us -->
-                <!-- <li> -->
-                            <!-- <div class="media-left"> -->
-                                <!-- <div class="icon"> <i class="icon-envelope-open"></i></div> -->
-                            <!-- </div> -->
-                            <!-- <div class="media-body"> -->
-                                <!-- <h6>Email us</h6> -->
-                                <!-- <p>info@samruddhiautoworld.com</p> -->
-                            <!-- </div> -->
-                        <!-- </li> -->
-                <!-- </ul> -->
-                <!-- </div> -->
+           
             </div>
 
             <!-- Navigation -->
-            <nav class="navbar" >
+            <nav class="navbar">
                 <div class="container">
                     <ul class="nav ownmenu">
-                        <li class="active"> <a href="index.html">Home</a> </li>
-                        <li> <a href="about.html">About</a> </li>
-                        <li> <a href="poweroxyo2.html">Power O2</a> </li>
-						       <li><a href="BlendedDiesel.html">Blended Diesel </a> </li>
+                        <li class="active"> <a href="index.html" class="active">Home</a> </li>
+                        <li > <a href="about.html">About us</a> </li>
+						      
+							  
+			
+        <li>
+            <a href="#">Products &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="poweroxyo2.html" style="background-color:  #36404b; !important">Power O2</a></li>
+                <li><a href="BlendedDiesel.html" style="background-color:  #36404b; !important">Blended Diesel </a></li>
+
+            </ul>
+        </li>
+
+   	  <li> <a href="media.html">media</a> </li>
                         <li> <a href="gallery.html">Gallery</a> </li>
                         <li> <a href="contact.html">Contact us</a> </li>
                     </ul>
                 </div>
             </nav>
         </header>
+	
 
-        <!--======= HOME MAIN SLIDER =========-->
-        <div class="home-slider section" >
-            <!-- Slider Loader -->
-            <div id="loader" class="hom-slie">
-                <div class="tp-loader spinner0"> <span class="dot1"></span> <span class="dot2"></span> <span class="bounce1"></span> <span class="bounce2"></span> <span class="bounce3"></span> </div>
-            </div>
+<!-- Slider 1 -->
+<div class="slider" id="slider1" style="height:440px;" >
+    <!-- Slides -->
+	 	         
+    <div style="background-image:url(images/ab.jpg)">
 
-            <!-- SLIDE Start -->
-            <div class="tp-banner-container">
-                <div class="tp-banner">
-                    <ul>
-
-                        <!-- SLIDE  -->
-                        <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" data-thumb="images/painter-4075713_1920.jpg">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/about.jpg" alt="slider" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
-                        </li>
-
-                        <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" data-thumb="images/hands-600497_1920.jpg">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/hands-600497_1920.jpg" alt="slider" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
-                        </li>
-
-                        <!-- SLIDE  -->
-                        <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" data-thumb="images/about.jpg">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/painter-4075713_1920.jpg" alt="slider" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
-
-                            <!-- LAYER -->
-                            <!-- <div class="tp-caption sfb font-martel text-uppercase tp-resizeme" data-x="['left','left','left','left']" data-hoffset="['845','300','15','15']" data-y="['middle','middle','middle','top']" data-voffset="['-150','-100','-100','25']" data-fontsize="['24','24','24','18']"
-                                data-fontweight="['800','800','800','800']" data-lineheight="['24','24','24','24']" data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.0" data-endelementdelay="0"
-                                data-endspeed="300" data-width="none" data-height="none" data-responsive_offset="on" data-whitespace="nowrap" style="z-index: 5; font-size:24px; font-weight:800; color:#fff;">Save Environment</div> -->
-
-                            <!-- LAYER -->
-                            <!-- <div class="tp-caption sfb font-martel text-white text-uppercase tp-resizeme" data-x="['left','left','left','left']" data-hoffset="['845','300','15','15']" data-y="['middle','middle','middle','top']" data-voffset="['-80','-50','-50','60']" data-fontsize="['50','50','40','30']"
-                                data-fontweight="['800','800','800','800']" data-lineheight="['24','24','24','24']" data-speed="500" data-start="750" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.0" data-endelementdelay="0"
-                                data-endspeed="300" data-responsive_offset="on" data-whitespace="nowrap" style="z-index: 5; font-size:50px; font-weight:800; color:#fff;">Car Repair & Services</div> -->
+          <span class="spanmark" style="padding-bottom:100px;color:white;" >
+        <h3 style="color:white;" >
+WELCOME TO SAMRUDHHI AUTOWORLD PVT. LTD. 
+</h3> 
+       
+    </span> 
+    </div>
+    <div style="background-image:url(images/hands-600497_1920.jpg)"></div>
+    <div style="background-image:url(images/environmental-protection-326923_1920.jpg)"></div>
+    <div style="background-image:url(images/home.jpeg)"></div>
+  
+    <!-- The Arrows -->
+    <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+    <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+    <!-- Title Bar -->
+	 
+    
+</div>
 
 
-                        </li>
 
-                        <!-- SLIDE  -->
-                        <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" data-thumb="/images/home.jpeg">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/home.jpeg" alt="slider" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
+			
+			
+			   <section class="padding-top-50 padding-bottom-80" style="background-color:white;">
+			    
+				
+<div class="container">
+  <div class="row">
+    <div class="col-md-6"style="margin-top:20px;" >
+         <div class="card" style="background-color:#f04e47; padding:30px; height:450px;">
+          <div class="card-block">
+      
+			
+       <div class="heading text-center" >
+                        <h5>OUR BUSINESS</h5>
+                        <hr>
+                    </div>
 
-                            <!-- LAYER -->
-                            <!-- <div class="tp-caption sfb font-martel text-uppercase tp-resizeme" data-x="['left','left','left','left']" data-hoffset="['845','300','15','15']" data-y="['middle','middle','middle','top']" data-voffset="['-150','-100','-100','25']" data-fontsize="['24','24','24','18']"
-                                data-fontweight="['800','800','800','800']" data-lineheight="['24','24','24','24']" data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.0" data-endelementdelay="0"
-                                data-endspeed="300" data-width="none" data-height="none" data-responsive_offset="on" data-whitespace="nowrap" style="z-index: 5; font-size:24px; font-weight:800; color:#fff;">Save Earth</div> -->
-
-                            <!-- LAYER -->
-                            <!-- <div class="tp-caption sfb font-martel text-white text-uppercase tp-resizeme" data-x="['left','left','left','left']" data-hoffset="['845','300','15','15']" data-y="['middle','middle','middle','top']" data-voffset="['-80','-50','-50','60']" data-fontsize="['50','50','40','30']"
-                                data-fontweight="['800','800','800','800']" data-lineheight="['24','24','24','24']" data-speed="500" data-start="750" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.0" data-endelementdelay="0"
-                                data-endspeed="300" data-responsive_offset="on" data-whitespace="nowrap" style="z-index: 5; font-size:50px; font-weight:800; color:#fff;">Save Home</div> -->
-
-
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+                    <p style="font-size: medium; color:white;">We are energy experts bringing unique technologies for reduction in consumption of fuels like Diesel, Petrol LPG and CNG especially for All Four Wheelers and DG Sets. </p>
+                       <p style="font-size: medium ;color:white;">We also deal with Eco-Friendly Fuels which can be used in all Diesel Engines, Diesel Generators, Boilers, Hot Water Generators, Air Pre-Heaters, Furnaces, Earth Moving, Mining and Material Handling Equipment creating clean environment. </p>
+													
+                  </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
         </div>
+         
+    </div>
 
-        <!-- Content -->
-        <div id="content" >
-
-            <!-- Welcome -->
-            <section class="padding-top-100 padding-bottom-80" style="background-color:#ededed;">
-                <div class="container">
-
-                    <!-- Heading -->
-                    <div class="heading text-center">
+    <div class="col-md-6" style="margin-top:20px;">
+            <div class="card" style="background-color:#f04e47; padding:30px; height:450px;">
+          <div class="card-block">
+         
+	    <div class="heading text-center">
                         <h5>About Company</h5>
                         <hr>
                     </div>
-                    <p style="font-size: medium;">Samruddhi Autoworld Pvt Ltd was incorporated in September, 2013 with a view to distribute spare parts for BOSCH-Automotive Aftermarket division. Later with great customer service the Company was able to receive distributorships from
-                        many other Automotive Spare parts manufacturing Company.</p>
-
-                    <p style="font-size: medium;">Viral Shah, 28, Director of the Company always had a vision to expand the network to other Countries. In 2014 the Company in partnership with others invested in the Uganda - The east African country and entered into whole new segment
-                        of Energy Conservation Solutions which was the need of the hour. The Company focused on products for Solving the energy related issues for industries and with a mission of Protecting the Mother earth from depleting resources and
-                        environment.
-                    </p>
-
-                    <p style="font-size: medium;">With Successful expansion in Uganda, Tanzania, UAE and South Africa the Company has now decided to focus on energy conservation in India and making India a pollution free country. With this Vision the Company has tied up with PowerO2
-                        (device to reduce fuel consumption and emissions) manufacturers and has received exclusive distribution rights for the Country.
-                    </p>
-
-                    <p style="font-size: medium;">The Company is very much optimistic about taking this step into reversing the Global warming and protecting the Nature.
-                    </p>
-
-                </div>
+      
+                    <p style="font-size: medium; color:white;"><b>Power O2 – </b> A patented device which can be installed on all Diesel & Petrol Engines and equivalent applications for saving significant amount of fuel and money  </p>
+                       <p style="font-size: medium; color:white;"><b>Blended Bio Diesel -</b> Suitable for All Diesel Engines and equivalent applications for saving significant fuel cost and improve performance   </p>
+ <p style="font-size: medium; color:white;"> Our wholistic approach generates the best value for the end user.  </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+          </div>
+	  
+  </div>
+</div>
+			
             </section>
-            <!-- product -->
-            <section class="padding-top-100 padding-bottom-100" style="background-color:#ededed;">
-                <div class="container">
-                    <!-- Heading -->
-                    <div class="heading text-center">
-                        <h5>Products</h5>
+			
+			
+	   <section class="padding-top-50 padding-bottom-80" style="background-color:#ededed;">
+			    
+				
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 "style="margin-top:20px;" >
+         <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+      
+			
+     <div class="heading text-center">
+                        <h5 >OUR MISSION:</h5>
                         <hr>
                     </div>
+					
+					<div class="row">
+ 
+                <p style="font-size: medium;"><h3> </h3></p>
 
-                    <!-- TEAM -->
-                    <div class="team">
-                        <div class="row">
 
-                            <!-- MEMBER -->
-                            <div class="col-md-6">
-                                <article>
-                                    <img class="img-responsive" src="images/Picture1.png" alt="" style="width: 50%;">
-                                </article>
-                            </div>
+		<h4 style=" text-align: center;font-family: 'Open Sans', sans-serif;   font-weight: 600;
+  font-size: 25px; color:white;">
+		"To deliver environment friendly products and solutions to reduce consumption of Fuel, Oil and Electricity and save money for our customers"
+	</h4>
+                  </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+         
+    </div>
 
-                            <div class="col-md-6">
+   
+	  
+  </div>
+</div>
+			
+            </section>
+			
 
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-
-                                    <!-- Luxury Cars -->
-                                    <div role="tabpanel" class="tab-pane animated-3s fadeInRight active" id="luxury">
-                                        <h4>POWER O2</h4>
-                                        <p>A group dedicated to contribute to an efficient utilization of fuel along with creating an eco-friendly environment. We provide unique & economical products for the benefit of masses as well as conserving fuel,
-                                            resulting in saving of Foreign exchange.</p>
-                                        <p>PowerO2 is a complete combustion technology - pre- combustion catalytic converter, a new concept of the millennium offering multi-facetted benefits applicable to all internal combustion engines.</p>
-                                        <p>POWER O2 Providing outstanding Clean Energy Technologies with a target to Save substantially all types of fuel in Internal Combustion Engines for Global Benefits for high cost of fuel in this hard Days of Fuel Crunch....</p>
-                                        <a href="poweroxyo2.html" class="btn margin-top-20">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a> </div>
-                                </div>
-                            </div>
-                        </div>
+<section class="padding-top-100 padding-bottom-80" style="background-color:white;">
+			
+				<div class="container">
+  <div class="heading text-center">
+                        <h5>OUR CORE VALUES</h5>
+                        <hr>
                     </div>
-                </div>
+					
+					<div class="row">
+ 
+                <p style="font-size: medium;"><h3> </h3></p>
 
-                <!-- <div class="container padding-top-30">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <h6 style="text-align: center;">About the product</h6>
-                            <iframe width="360" height="219" src="https://www.youtube.com/embed/1N1iV59fR9c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
 
-                        <div class="col-sm-4">
-                            <h6 style="text-align: center;">Installation Process</h6>
-                            <iframe width="360" height="219" src="https://www.youtube.com/embed/1B_R5YK0A6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+		<div class="row no-gutters">
+  <!-- <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div> -->
+  <div class="col-6 col-md-8">
+		<h4 style="font-size: extra-large; ">
+	Core values set by us are; the guiding principles and indicator of our company’s behaviour not only in business but beyond. 
+	</h4>
+		</div>
 
-                        <div class="col-sm-4">
-                            <h6 style="text-align: center;">Cleaning & Servicing of Power O2</h6>
-                            <iframe width="360" height="219" src="https://www.youtube.com/embed/nKB1W-XCm-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+	  <div class="col-6 col-md-4"><img src="images/rsz_refugees-1020255_1280.png" style="height:250px; width: 300px;"  ></div>
+</div>
+</div>
+</div>
+</section>
 
-                    </div>
-                </div> -->
+
+
 
             </section>
+			
+					
+			   <section class="padding-top-100 padding-bottom-80" style="background-color:#ededed;">
+			
+				<div class="container">
 
-            <!-- Testimonial -->
-            <section class="testimonial padding-top-100 padding-bottom-100" style="background-color:#ededed;" >
-                <div class="container">
-                    <div class="row">
-                        <!-- Our Happy Clients -->
-                        <div class="col-md-12">
-                            <!-- Heading -->
-                            <div class="heading text-center" >
-                                <h5>Our Clients</h5>
-                                <hr>
-                            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"style="margin-top:20px;" >
+         <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+          <div class="heading text-center">
+		  <img src="images/homek.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>Commitment</h4><hr>
+<p class="card-text" style="color:white;font-size:20px; margin:0px;">Committed to environment sustainability in a friendly way  </p>
+                  </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+         
+    </div>
 
-                            <!-- CLIENTS -->
-                            <div class="clients-img" style="background-color:white;">
-                                <ul>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-1.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-2.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-3.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-4.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-5.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                    <li>
-                                        <a href="#."> <img src="images/c-img-6.png" class="img-responsive" alt=""> </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div class="col-md-4" style="margin-top:20px;">
+            <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+         
+					 <div class="heading text-center">
+		  <img src="images/avb2.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>Accountability</h4><hr>
+              <p class="card-text" style="color:white;font-size:20px;">Accountable for delivering committed things to our customers  </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+          </div>
+	    <div class="col-md-4" style="margin-top:20px;">
+       
+        <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+        
+<div class="heading text-center">
+		  <img src="images/int.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>Integrity</h4><hr>
+           <p class="card-text" style="color:white;font-size:20px;">Being ethical through honesty, trustworthiness and hardworking  </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+	<div class="container">
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"style="margin-top:20px;" >
+         <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+          <div class="heading text-center">
+		  <img src="images/int2.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>CONSISTENCY</h4><hr>
+<p class="card-text" style="color:white;font-size:20px; margin:0px;">Consistent in; business plans, product quality and customer service </p>
+                  </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+         
+    </div>
 
+    <div class="col-md-4" style="margin-top:20px;">
+            <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+         
+					 <div class="heading text-center">
+		  <img src="images/pos.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>POSITIVITY</h4><hr>
+              <p class="card-text" style="color:white;font-size:20px;">Provide positive support to our customers; with energy and enthusiasm creating trust </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+          </div>
+	    <div class="col-md-4" style="margin-top:20px;">
+       
+        <div class="card" style="background-color:#f04e47; padding:30px; height:350px;">
+          <div class="card-block">
+        
+<div class="heading text-center">
+		  <img src="images/cab.png" style="width:100px;" >
+                      
+							   
+               </div>
+			   	<h4 class="text-left" style=color:#ffffff>CELEBRATION</h4><hr>
+           <p class="card-text" style="color:white;font-size:20px;">Celebrate and enjoy the entire business journey  </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+				
+			 
+         
 
         </div>
 
@@ -380,8 +876,173 @@
     <!-- Begin map script-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf0dPCQ0C7oVF0WFKhuyz7v7oWei3vFPI"></script>
     <script src="js/main.js"></script>
+	<script>
+
+(function($) {
+  "use strict";
+  $.fn.sliderResponsive = function(settings) {
+    
+    var set = $.extend( 
+      {
+        slidePause: 5000,
+        fadeSpeed: 800,
+        autoPlay: "on",
+        showArrows: "off", 
+        hideDots: "off", 
+        hoverZoom: "on",
+        titleBarTop: "off"
+      },
+      settings
+    ); 
+    
+    var $slider = $(this);
+    var size = $slider.find("> div").length; //number of slides
+    var position = 0; // current position of carousal
+    var sliderIntervalID; // used to clear autoplay
+      
+    // Add a Dot for each slide
+    $slider.append("<ul></ul>");
+    $slider.find("> div").each(function(){
+      $slider.find("> ul").append('<li></li>');
+    });
+      
+    // Put .show on the first Slide
+    $slider.find("div:first-of-type").addClass("show");
+      
+    // Put .showLi on the first dot
+    $slider.find("li:first-of-type").addClass("showli")
+
+     //fadeout all items except .show
+    $slider.find("> div").not(".show").fadeOut();
+    
+    // If Autoplay is set to 'on' than start it
+    if (set.autoPlay === "on") {
+        startSlider(); 
+    } 
+    
+    // If showarrows is set to 'on' then don't hide them
+    if (set.showArrows === "on") {
+        $slider.addClass('showArrows'); 
+    }
+    
+    // If hideDots is set to 'on' then hide them
+    if (set.hideDots === "on") {
+        $slider.addClass('hideDots'); 
+    }
+    
+    // If hoverZoom is set to 'off' then stop it
+    if (set.hoverZoom === "off") {
+        $slider.addClass('hoverZoomOff'); 
+    }
+    
+    // If titleBarTop is set to 'on' then move it up
+    if (set.titleBarTop === "on") {
+        $slider.addClass('titleBarTop'); 
+    }
+
+    // function to start auto play
+    function startSlider() {
+      sliderIntervalID = setInterval(function() {
+        nextSlide();
+      }, set.slidePause);
+    }
+    
+    // on mouseover stop the autoplay
+    $slider.mouseover(function() {
+      if (set.autoPlay === "on") {
+        clearInterval(sliderIntervalID);
+      }
+    });
+      
+    // on mouseout starts the autoplay
+    $slider.mouseout(function() {
+      if (set.autoPlay === "on") {
+        startSlider();
+      }
+    });
+
+    //on right arrow click
+    $slider.find("> .right").click(nextSlide)
+
+    //on left arrow click
+    $slider.find("> .left").click(prevSlide);
+      
+    // Go to next slide
+    function nextSlide() {
+      position = $slider.find(".show").index() + 1;
+      if (position > size - 1) position = 0;
+      changeCarousel(position);
+    }
+    
+    // Go to previous slide
+    function prevSlide() {
+      position = $slider.find(".show").index() - 1;
+      if (position < 0) position = size - 1;
+      changeCarousel(position);
+    }
+
+    //when user clicks slider button
+    $slider.find(" > ul > li").click(function() {
+      position = $(this).index();
+      changeCarousel($(this).index());
+    });
+
+    //this changes the image and button selection
+    function changeCarousel() {
+      $slider.find(".show").removeClass("show").fadeOut();
+      $slider
+        .find("> div")
+        .eq(position)
+        .fadeIn(set.fadeSpeed)
+        .addClass("show");
+      // The Dots
+      $slider.find("> ul").find(".showli").removeClass("showli");
+      $slider.find("> ul > li").eq(position).addClass("showli");
+    }
+
+    return $slider;
+  };
+})(jQuery);
+
+
+ 
+//////////////////////////////////////////////
+// Activate each slider - change options
+//////////////////////////////////////////////
+$(document).ready(function() {
+  
+  $("#slider1").sliderResponsive({
+  // Using default everything
+    // slidePause: 5000,
+    // fadeSpeed: 800,
+    // autoPlay: "on",
+    // showArrows: "off", 
+    // hideDots: "off", 
+    // hoverZoom: "on", 
+    // titleBarTop: "off"
+  });
+  
+  $("#slider2").sliderResponsive({
+    fadeSpeed: 300,
+    autoPlay: "off",
+    showArrows: "on",
+    hideDots: "on"
+  });
+  
+  $("#slider3").sliderResponsive({
+    hoverZoom: "off",
+    hideDots: "on"
+  });
+  
+}); 
+
+
+
+</script>
 </body>
 
 <!-- Mirrored from premiumlayers.net/demo/html/auril/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Mar 2020 10:52:25 GMT -->
 
 </html>
+
+

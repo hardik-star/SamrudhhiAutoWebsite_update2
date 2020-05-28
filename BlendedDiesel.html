@@ -35,6 +35,74 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+.dropbtn {
+  background-color:  #36404b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content :hover {
+  background-color: yellow;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:   #36404b;}
+
+
+.dropdown .active.a{
+background-color:red;
+}
+#imageset{
+padding-top:482px; background-image:url('images/fuel-1596622_640.jpg'); background-repeat: no-repeat; background-size: cover;
+}
+#imageset2{
+padding-top:540px; background-image:url('images/gallery/um.jpg'); background-repeat: no-repeat; background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+ #imageset{
+padding-top:400px; background-image:url('images/fuel-1596622_640.jpg''); background-repeat: no-repeat; background-size: cover;
+}
+#imageset2{
+padding-top:482px; background-image:url('images/gallery/um.jpeg''); background-repeat: no-repeat; background-size: cover;
+}
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+ #imageset{
+padding-top: 300px; background-image:url('images/fuel-1596622_640.jpg'); background-repeat: no-repeat; background-size: cover;
+}
+#imageset2{
+padding-top:300px; background-image:url('images/gallery/um.jpeg'); background-repeat: no-repeat; background-size: cover;
+}
+</style>
 </head>
 
 <body>
@@ -42,7 +110,7 @@
     <!-- Wrap -->
     <div id="wrap">
         <!-- header -->
-        <header>
+      <header>
 
             <!-- Logo -->
             <div class ="cont" >
@@ -50,33 +118,6 @@
                     <a href="#."><img class="img-responsive" src="images/logo1.png" alt=""></a>
                 </div>
 
-                <!-- INFO -->
-                <!-- <div class="top-info-con">
-                    <ul> -->
-
-                <!-- Call Us Now -->
-                <!-- <li>
-                            <div class="media-left">
-                                <div class="icon"> <i class="icon-call-in"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <h6>Call Us Now </h6>
-                                <p>+(91)9820644020 </p>
-                            </div>
-                        </li> -->
-
-                <!-- Email us -->
-                <!-- <li>
-                            <div class="media-left">
-                                <div class="icon"> <i class="icon-envelope-open"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <h6>Email us</h6>
-                                <p>info@samruddhiautoworld.com</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div> -->
             </div>
 
             <!-- Navigation -->
@@ -84,9 +125,17 @@
                 <div class="container">
                     <ul class="nav ownmenu">
                         <li> <a href="index.html">Home</a> </li>
-                        <li> <a href="about.html">About</a> </li>
-                       <li>  <a href="poweroxyo2.html">Power O2</a> </li>
-						      <li class="active">    <a href="BlendedDiesel.html">Blended Diesel </a> </li>
+                        <li > <a href="about.html">About us</a> </li>
+						      
+			 <li  class="active">
+            <a href="#" >Products &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="poweroxyo2.html" style="background-color:  #36404b; !important">Power O2</a></li>
+                <li><a href="BlendedDiesel.html" style="background-color:  #36404b; !important">Blended Diesel </a></li>
+
+            </ul>
+        </li>
+	  <li> <a href="media.html">media</a> </li>
                         <li> <a href="gallery.html">Gallery</a> </li>
                         <li> <a href="contact.html">Contact us</a> </li>
                     </ul>
@@ -95,319 +144,184 @@
         </header>
 
         <!-- SUB BANNER -->
-        <section class="sub-bnr">
-            <div class="position-center-center">
-                <div class="container"> <img src="images/sub-bnr-hr-up.png" alt="">
-                    <h4>Blended Diesel </h4>
-                    <ol class="breadcrumb">
-                        <li><a href="#">Product</a></li>
-                        <li class="active">Blended Diesel </li>
-                    </ol>
-                    <img src="images/sub-bnr-hr.png" alt=""> </div>
-            </div>
-        </section>
-
-        <!-- Content -->
-        <div id="content">
-
-            <!-- Welcome -->
-            <section class="padding-top-100 padding-bottom-50" style="background-color:#ededed;">
-                <div class="container">
-
-                    <!-- Heading -->
-                    <div class="heading text-center">
-                        <h5>Blended Diesel
-</h5>
-                        <hr>
-                    </div>
+          <section class="padding-top-100 padding-bottom-80" style="background-color:white;">
+			    
+				
+				<div class="container" >
+			  <div class="row">
+			   <!-- Heading -->
+               
+  
+    <div class="col-lg-6" id="imageset" >
+	   <!-- Heading -->
                    
 
-
-
-                    <!-- SERVICES -->
-
-                    <div class="blog  padding-bottom-50">
-                        <div class="container">
-
-                            <!-- Row -->
-                            <div class="row">
-
-                                <!-- BLOG -->
-                                <div class="col-md-12">
-                                    <div class="news">
-
-                                        <!-- BLOG POST -->
-                                        <article>
-                                            <img class="img-responsive" src="" alt="">
-
-                                            <div class="post-info">
-                                                <div class="date-post"></div>
-                                                <div class="extra" style="font-size: x-large; font-weight: 800;">Introduction</div>
-                                                <div class="post-in">
-                                                    <!-- <h4 class="tittle-post"><a href="#.">Now were up in the big leagues getting our turn </a></h4> -->
-                                                    <!-- <ol> -->
-                                                        <!-- <li>Power O2 is ‘PATENTED’ Clean Energy Technology with a target to substantially save all types of fuel in Internal Combustion Engines (ICE). It is a ‘complete combustion technology’ invented by Automobile Design Experts after an extensive research of almost ten years.  </li> -->
-                                                        <!-- <br> -->
-                                                        <!-- <li>Basically, Power O2 is a pre- combustion catalytic converter; the newest concept of the millennium offering multi-facetted benefits applicable to all internal combustion engines. </li> -->
-                                                        <!-- <br> -->
-                                                        <!-- <li>Power O2 is a simple external attachment which provides enriched and homogenous mixture of oxygen to Engine for ideal air- fuel mixture. Hot air enriched with Oxygen ensures high burning efficiency and maximum heat out put from engine.    </li> -->
-                                                        <!-- <br> -->
-                                                        <!-- <li>The installation is easy and takes hardly twenty to thirty minutes with NO alterations to engine.  </li> -->
-                                                        <!-- <br> -->
-													
-
-                                                    <!-- </ol> -->
-													
- <h6>What Is Bio Diesel ? 
-</h6>
-                    <p>Technically speaking, Biodiesel is a renewable fuel manufactured from methanol and vegetable oil, animal fats, and recycled cooking fats. 
-</p>
-                    <p style="margin-bottom: 20px;">Biodiesel only refers to 100% pure fuel that meets the definition above
-
-                    </p>
-					     <h6>What is ‘Blended Diesel’ ? 
- 
-</h6>
-                    <p>Blended diesel is a mixture of bio diesel + ‘petroleum diesel fuel’ (or called Mineral Diesel) in specific proportion intended to be used as a substitute for HSD
-
-</p>
-                    <p style="margin-bottom: 20px;">Blended bio diesel can be safely used in Boilers, DG sets, any Diesel engine and Earth moving  machines
-
-
-                    </p>
-						<img src="images/oil3.jpg" alt="" style="width: 35%;height:30%;">&nbsp
-						<!-- <img src="images/bo1.jpg" alt="" style="width: 22%;height:30%;"> -->
-						<!-- <br> -->
-						<!-- <br> -->
-						<!-- <img src="images/bo2.jpg" alt="" style="width: 22%;height:30%;">&nbsp&nbsp -->
-						<!-- <img src="images/bo3.jpg" alt="" style="width: 22%;height:30%;"> -->
-                                                </div>
-                                        </article>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-					
-						
-						
-						
-						 <div class="blog blog-page padding-bottom-50">
-                                <div class="container">
-
-                                    <!-- Row -->
-                                    <div class="row">
-
-                                        <!-- BLOG -->
-                                        <div class="col-md-12">
-                                            <div class="news">
-
-                                                <!-- BLOG POST -->
-                                                <article>
-                                                    <img class="img-responsive" src="" alt="">
-
-                                                    <div class="post-info">
-                                                        <div class="date-post"></div>
-                                                        <div class="extra" style="font-size: x-large; font-weight: 800;">Benefits of Blended Diesel</div>
-                                                        <div class="post-in">
-                                                            <!-- <h4 class="tittle-post"><a href="#.">Now were up in the big leagues getting our turn </a></h4> -->
-                                                      
-                                                              
-                                                                 
-                                                    <ol>
-                                                        <li>Cheaper in Price as compared to HSD
-  </li>
+    </div>
+	  <div class="col-lg-6" style="background-color:#f04e47; padding:50px;" >
+	   
+		     <h3 class="text-left" style=color:#ffffff>Introduction</h3>
+                     
+                        <hr>
+						  <ol>
+                                                        <li style="font-size: medium; color:white;">Blended Bio-diesel is a renewable fuel manufactured from methanol and vegetable oil, animal fats, and recycled cooking fats.  </li>
                                                         <br>
-                                                        <li>It is a clean burning fuel with better ignition and Combustion
-. </li>
+                                                        <li style="font-size: medium; color:white;">It is compatible with existing diesel engines and can be used alone or blended in specific proportions. Biodiesel blends can also be used as heating oil and is a perfect substitute for HSD.  </li>
                                                         <br>
-                                                        <li>Has lower moisture content and give higher heat output reducing fuel consumption
-  </li>
+                                                        <li style="font-size: medium; color:white;">Blended bio diesel can be safely used in All Types of Diesel Engines, DG Sets, Boilers, Earth moving machines, Mining Equipment and Material Handling machines & Equivalent applications    </li>
                                                         <br>
-                                                        <li>Does not require modifications to a Diesel engine / DG / Boiler in which it is to be used
-
-  </li> <br>
-  
-                                    <li>HIt has reduced exhaust emissions and lower toxicity compared to HSD
-
-  </li> <br>
-                                    <li>Safe to handle
-
-  </li> <br>
-  
-                                                           <br>
-													
+       
+                                                       
+												
+                                                 
+                                                        <br>
 
                                                     </ol>
-                                                          
-                                                            
-  <img src="images/cd.jpeg" alt="" style="width: 30%;height:30%;"> 
-                                                        </div>
-                                                </article>
-                                                </div>
-                                            </div>
+                 
 
-                                        </div>
+                   
 
-
-                                    </div>
-                                </div>
-
-                        <div class="blog blog-page padding-bottom-50">
-                            <div class="container">
-
-                                <!-- Row -->
-                                <div class="row">
-
-                                    <!-- BLOG -->
-                                    <div class="col-md-12">
-                                        <div class="news">
-
-                                            <!-- BLOG POST -->
-                                            <article>
-                                                <img class="img-responsive" src="" alt="">
-
-                                                <div class="post-info">
-                                                    <div class="date-post"></div>
-                                                    <div class="extra" style="font-size: x-large; font-weight: 800;">Environment & Safety
-
+   </div>
+  </div>
+            
 </div>
-                                                    <div class="post-in">
-                                                        <!-- <h4 class="tittle-post"><a href="#.">Now were up in the big leagues getting our turn </a></h4> -->
-                                                        <ol>
-                                                            <li>Blended Diesel has substantial reduction in unburned hydrocarbons, carbon monoxide and particulate matter in exhaust fumes. 
-
-
-                                                            </li>
-                                                            <br>
-                                                            <li>Sulphur dioxide emissions are significantly reduced resulting in non - offensive exhaust and doesn't cause eye irritation. 
-
-
-                                                            </li>
-                                                            <br>
-                                                            <li> Blended Diesel burns cleaner than normal HSD 
-
-                                                            </li>
-                                                            <br>
-                                                            <li>Diesel Engines / Boilers do not require any modifications 
-
-
-                                                            </li>
-                                                            <br>
-															 <li>Blended Diesel is environment friendly and more biodegradable
-
-
-
-                                                            </li>
-                                                            <br>
-															 <li>Studies show that Bio diesel and it’s blends dramatically reduce potential risks of cancer and birth defects and help preserve natural resources. 
-
-
-
-                                                            </li>
-                                                            <br>
-                                                           
-                                                        </ol>
-														  <img src="images/img33.jpg" alt="" style="width: 30%;height:30%;"> 
-
-                                                    </div>
-                                            </article>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="blog blog-page padding-bottom-50">
-                                <div class="container">
-
-                                    <!-- Row -->
-                                    <div class="row">
-
-                                        <!-- BLOG -->
-                                        <div class="col-md-12">
-                                            <div class="news">
-
-                                                <!-- BLOG POST -->
-                                                <article>
-                                                    <img class="img-responsive" src="" alt="">
-
-                                                    <div class="post-info">
-                                                        <div class="date-post"></div>
-                                                        <div class="extra" style="font-size: x-large; font-weight: 800;">Application</div>
-                                                        <div class="post-in">
-                                                            <!-- <h4 class="tittle-post"><a href="#.">Now were up in the big leagues getting our turn </a></h4> -->
-                                                            <ol>
-                                                                <li>Boilers
-
-
-
-                                                                </li>
-                                                                <br>
-                                                                <li>Hot water Generators
-
-
-                                                                </li>
-                                                                <br>
-
-                                                                <li>Diesel Engines 
-
-                                                                </li>
-                                                                <br>
-                                                                <li>HDG Sets and similar Emergency Services 
-
-
-
-                                                                </li>
-																<br>
-																  <li>Construction, Mining  and Earth moving machines 
-
-
-
-
-                                                                </li>
-																<br>
-																  <li>Boats & Ships
-
-
-
-
-                                                                </li>
-                                                            </ol>
-															  <img src="images/img66.jpg" alt="" style="width: 30%;height:30%;"> &nbsp &nbsp
-                                                          <img src="images/img88.jpg" alt="" style="width: 35%;height:30%;"> 
-                                                        </div>
-														
-                                                </article>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                            
-                                      
-
-                                   
-                                                 
-
-                                                     
-
-                                                            <!-- BLOG -->
-                                                           
-                                                                
             </section>
 
 
-            </div>
+   <section class="padding-top-10 padding-bottom-80" style="background-color:white;">
+			    
+				
+				<div class="container" >
+			  <div class="row">
+			   <!-- Heading -->
+                 <div class="col-lg-6" style="background-color:#f04e47; padding:50px;" >
+	   
+		     <h3 class="text-left" style=color:#ffffff>BENEFITS</h3>
+                     
+                        <hr>
+                 
+
+                        <!-- <h4 class="tittle-post"><a href="#.">Now were up in the big leagues getting our turn </a></h4> -->
+                                                    <ol>
+                                                        <li style="font-size: medium; color:white;">Does not require modifications to a SYSTEM in which it is to be used  </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;">Safe to handle and Store</li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;">Clean burning better ignition </li>
+                                                        <br>
+														  <li style="font-size: medium; color:white;">Higher heat output reducing fuel consumption</li>
+                                                        <br>
+														  <li style="font-size: medium; color:white;">Lower sulphur content </li>
+                                                        <br>
+														  <li style="font-size: medium; color:white;">Reduced exhaust emissions & lower toxicity  </li>
+                                                        <br>
+														 <li style="font-size: medium; color:white;">Saves significant money towards fuel cost  </li>
+                                                        <br>
+       
+                                                       
+												
+                                                 
+                                                        <br>
+
+                                                    </ol>
+
+
+   </div>
+  
+    <div class="col-lg-6" id="imageset2" >
+	   <!-- Heading -->
+                   
+
+    </div>
+	
+  </div>
+            
+</div>
+            </section>
+
+				   <section class="padding-top-10 padding-bottom-80" style="background-color:white;">
+			    
+				
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" >
+         <div class="card" style="background-color:#f04e47; padding:30px; height:450px;">
+          <div class="card-block">
+      
+			
+   
+		     <h3 class="text-left" style=color:#ffffff>APPLICATIONS</h3>
+                     
+                        <hr>
+                 
+
+                    <ol>
+                                                        <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  All Diesel Engines / Vehicles </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Boilers </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Hot water Generators </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  DG Sets and similar Emergency Services  </li> <br>
+                                                            <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Construction Equipment   </li>
+												
+                                                 
+                                                        <br>
+														 <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Mining and Earth moving machines    </li>
+             <br>
+														 <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Boats & Ships    </li>
+                                                    </ol>
+
+													
+                  </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+         
+    </div>
+
+    <div class="col-md-6" >
+            <div class="card" style="background-color:#f04e47; padding:30px; height:450px;">
+          <div class="card-block">
+         
+	      <h3 class="text-left" style=color:#ffffff>ENVIRONMENT & SAFETY</h3>
+                     
+                        <hr>
+                 
+
+                    <ol>
+                                                        <li style="font-size: medium; color:white;"><i class="fa fa-circle" aria-hidden="true"></i>  Reduction in - unburned hydrocarbons, carbon monoxide )  </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"><i class="fa fa-circle" aria-hidden="true"></i>  No or Negligible particulate matter in exhaust  </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"> <i class="fa fa-circle" aria-hidden="true"></i>  Significant reduction in Sulphur dioxide emissions  </li>
+                                                        <br>
+                                                        <li style="font-size: medium; color:white;"><i class="fa fa-circle" aria-hidden="true"></i>  Cleaner emissions  </li> <br>
+                                                            <li style="font-size: medium; color:white;"><i class="fa fa-circle" aria-hidden="true"></i>  Environment friendly  </li>
+												
+                                                 
+                                                        <br>
+														<li style="font-size: medium; color:white;"><i class="fa fa-circle" aria-hidden="true"></i>  Dramatically reduces potential risks of cancer and birth defects.   </li>
+												
+                                                 
+                                                        <br>
+
+                                                    </ol>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-right"></p>
+          </div>
+        </div>
+          </div>
+	  
+  </div>
+</div>
+			
+            </section>
+	
+
+        <!-- Content -->
+     
 
             <!--======= FOOTER =========-->
             <footer style="margin-top:0px;">
